@@ -110,26 +110,9 @@ An example for the file directory after running module 5 (count) is as below.
 ```bash
 $ Enter mode name : count
 
-| CELL_PATCHES dataset : 
-        | RBC_Target        157
-        | WBC_Neutrophil_Band   200
-        | RBC_Elliptocyte    78
-        | RBC_Echinocyte    284
-        | WBC_Neutrophil_Segmented   168
-        | RBC_TearDrop       17
-        | WBC_Basophil      118
-        | WBC_Monocyte      115
-        | RBC_Spherocyte    210
-        | WBC_Eosinophil     75
-        | WBC_Metamyelocyte   221
-        | WBC_Smudge        122
-        | RBC_Stomatocyte    44
-        | WBC_Myelocyte     149
-        | RBC_Acanthocyte   214
-        | RBC_Schistocyte    75
-        | WBC_Lymphocyte_atypical   114
-        | WBC_Lymphocyte    127
-        | RBC_Normal        168
+| Cat_vs_Dog dataset : 
+        | cat       12500
+        | dog       12500
 ```
 
 ## 6. check
@@ -142,45 +125,11 @@ An example for the file directory after running module 4 (split) is as below.
 $ Enter mode name : check
 
 | train set : 
-        | RBC_Target        147
-        | WBC_Neutrophil_Band   190
-        | RBC_Elliptocyte    68
-        | RBC_Echinocyte    274
-        | WBC_Neutrophil_Segmented   158
-        | RBC_TearDrop        7
-        | WBC_Basophil      108
-        | WBC_Monocyte      105
-        | RBC_Spherocyte    200
-        | WBC_Eosinophil     65
-        | WBC_Metamyelocyte   211
-        | WBC_Smudge        112
-        | RBC_Stomatocyte    34
-        | WBC_Myelocyte     139
-        | RBC_Acanthocyte   204
-        | RBC_Schistocyte    65
-        | WBC_Lymphocyte_atypical   104
-        | WBC_Lymphocyte    117
-        | RBC_Normal        158
+        | cat        100
+        | dog        100
 | val set : 
-        | RBC_Target         10
-        | WBC_Neutrophil_Band    10
-        | RBC_Elliptocyte    10
-        | RBC_Echinocyte     10
-        | WBC_Neutrophil_Segmented    10
-        | RBC_TearDrop       10
-        | WBC_Basophil       10
-        | WBC_Monocyte       10
-        | RBC_Spherocyte     10
-        | WBC_Eosinophil     10
-        | WBC_Metamyelocyte    10
-        | WBC_Smudge         10
-        | RBC_Stomatocyte    10
-        | WBC_Myelocyte      10
-        | RBC_Acanthocyte    10
-        | RBC_Schistocyte    10
-        | WBC_Lymphocyte_atypical    10
-        | WBC_Lymphocyte     10
-        | RBC_Normal         10
+        | cat        100
+        | dog        100
 
 ```
 

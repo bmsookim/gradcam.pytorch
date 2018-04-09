@@ -29,10 +29,16 @@ git clone https://github.com/meliketoy/gradcam.pytorch
 
 ## Grad-CAM
 
-![alt_tag](./imgs/woof_meow.jpg)
+"Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization".
+
+![alt_tag](./imgs/gradcam.jpg)
 
 In this repo, we will be training and testing the model with a very simple, [cat vs dog](https://www.kaggle.com/c/dogs-vs-cats) dataset.
-You can view and download the dataset yourself by clicking the link above. Implementation on your own private data only requires modifications in the directory within the configuration files inside each modules.
+You can view and download the dataset yourself by clicking the link above. 
+
+![alt_tag](./imgs/woof_meow.jpg)
+
+Implementation on your own private data only requires modifications in the directory within the configuration files inside each modules.
 
 ### STEP 0 : Data preperation
 You can prepare your data with the [preprocessing module](./1_preprocessor).
