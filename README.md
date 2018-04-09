@@ -29,8 +29,10 @@ git clone https://github.com/meliketoy/gradcam.pytorch
 
 ## Grad-CAM
 
+![alt_tag](./imgs/woof_meow.jpg)
+
 In this repo, we will be training and testing the model with a very simple, [cat vs dog](https://www.kaggle.com/c/dogs-vs-cats) dataset.
-You can view and download the dataset yourself by clicking the link above.
+You can view and download the dataset yourself by clicking the link above. Implementation on your own private data only requires modifications in the directory within the configuration files inside each modules.
 
 ### STEP 0 : Data preperation
 You can prepare your data with the [preprocessing module](./1_preprocessor).
@@ -70,6 +72,8 @@ $ ./scripts/detect.sh
 ```
 
 This will generate a heatmap which will look like
+
+Implementation in leukocyte detection (which is a paper I'm currently working on) looks like,
 ![alt_tag](./imgs/heatmap_out.png)
 
 See [README-detector](./3_detector/README.md) for further instructions.
@@ -84,6 +88,9 @@ $ ./scripts/inference.sh
 ```
 
 This will give you a region and a prediction such as,
+
+
+Implementation on luekocyte detection will look like,
 ![alt_tag](./imgs/prediction.png)
 
 If you want to change the model configuration, see the [script](./3_detector/scripts/inference.sh) or the [configuration file](./3_detector/config.py)
