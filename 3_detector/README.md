@@ -1,10 +1,6 @@
 Grad-CAM module
 ================================================================================================
-Grad-CAM pytorch implementation
-
-## Grad-CAM
-This module performs accurate localization through solely trained classification wieghts.
-This is done by implementing an activation map, processed with a method called [Grad-CAM](http://openaccess.thecvf.com/content_ICCV_2017/papers/Selvaraju_Grad-CAM_Visual_Explanations_ICCV_2017_paper.pdf).
+Grad-CAM pytorch implementation of [original paper](http://openaccess.thecvf.com/content_ICCV_2017/papers/Selvaraju_Grad-CAM_Visual_Explanations_ICCV_2017_paper.pdf).
 
 ## Basic Setups
 Open [config.py](./config.py), and edit the lines below to your data directory.
@@ -60,12 +56,8 @@ Supporting networks
 
 - Original Image
 
-![alt_tag](../imgs/input.png)
+![alt_tag](../imgs/catdog_original.png)
 
 - Grad-CAM Image
 
-![alt_tag](../imgs/heatmap_out.png)
-
-- Inference & IoU with ground truth
-
-![alt_tag](../imgs/output.png)
+![alt_tag](../imgs/catdog_output.png)

@@ -1,6 +1,6 @@
 # ************************************************************
-# Author : Bumsoo Kim, 2017
-# Github : https://github.com/meliketoy/cellnet.pytorch
+# Author : Bumsoo Kim, 2018
+# Github : https://github.com/meliketoy/gradcam.pytorch
 #
 # Korea University, Data-Mining Lab
 # Deep Convolutional Network Fine tuning Implementation
@@ -39,9 +39,9 @@ args = parser.parse_args()
 # Phase 1 : Data Upload
 print('\n[Phase 1] : Data Preperation')
 
-data_dir = cf.test_base
+data_dir = cf.test_dir
 trainset_dir = cf.data_base.split("/")[-1] + os.sep
-print("| Preparing %s dataset..." %(cf.test_base.split("/")[-1]))
+print("| Preparing %s dataset..." %(cf.test_dir.split("/")[-1]))
 
 use_gpu = torch.cuda.is_available()
 
@@ -106,7 +106,7 @@ test_transform = transforms.Compose([
 if not os.path.isdir('result'):
     os.mkdir('result')
 
-output_file = "./result/"+cf.test_base.split("/")[-1]+"_inference.csv"
+output_file = "./result/"+cf.test_dir.split("/")[-1]+"_inference.csv"
 
 with open(output_file, 'wb') as csvfile:
     fields = ['file_name', 'prediction']

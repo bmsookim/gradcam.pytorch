@@ -36,7 +36,7 @@ git clone https://github.com/meliketoy/gradcam.pytorch
 In this repo, we will be training and testing the model with a very simple, [cat vs dog](https://www.kaggle.com/c/dogs-vs-cats) dataset.
 You can view and download the dataset yourself by clicking the link above. 
 
-![alt_tag](./imgs/woof_meow.jpg)
+<p align="center"><img width="40%" src="./imgs/woof_meow.jpg"></p>
 
 Implementation on your own private data only requires modifications in the directory within the configuration files inside each modules.
 

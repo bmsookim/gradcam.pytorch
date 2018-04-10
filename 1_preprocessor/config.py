@@ -1,9 +1,7 @@
 ############# Configuration file #############
 
 # Name of dataset
-name = 'MICCAI_TRAIN'
-#name = 'WBC_NH'
-#name = 'WBC_LH'
+name = 'Cat_vs_Dog'
 
 # Base directory for data formats
 data_base = '/mnt/datasets/' + name
@@ -20,6 +18,6 @@ split_dir = split_base + name
 rotate_mode = 'strict'
 
 # Validation split
-split = 'ratio' # [ratio/fix]
+split = 'fix' # [ratio/fix]
 val_ratio = 0.2
-val_num = 25
+val_num = 100

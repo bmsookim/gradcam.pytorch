@@ -40,14 +40,14 @@ class PropagationBase(object):
     def forward(self, image):
         self.image = image
         self.preds = self.model.forward(self.image)
-        self.probs = F.softmax(self.preds)[0]
+        self.probs = F.softmax(self.preds, dim=0)[0]
         self.prob, self.idx = self.probs.data.sort(0, True)
         return self.prob, self.idx
 
     def backward(self, idx):
         self.model.zero_grad()
         one_hot = self._encode_one_hot(idx)
-        self.preds.backward(gradient=one_hot, retain_variables=True)
+        self.preds.backward(gradient=one_hot, retain_graph=True)
 
 
 class GradCAM(PropagationBase):

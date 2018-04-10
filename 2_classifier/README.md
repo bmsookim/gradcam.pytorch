@@ -96,33 +96,3 @@ python main.py \
 $ ./test/resnet.sh
 
 ```
-
-The code above will automatically download weights from the given depth data, and train your dataset with a very small learning rate.
-
-## Feature extraction
-For various training mechanisms, extracted feature vectors are needed.
-
-This repository will provide you not only feature extraction from pre-trained networks,
-
-but also extractions from a model that was trained by yourself.
-
-Just set the test directory in the [config.py](config.py) and run the code below.
-
-```bash
-python extract_features.py
-```
-
-This will automatically create pickles in a newly created 'vector' directory,
-
-which will contain dictionary pickles which contains the below.
-
-Currently, the 'score' will only cover 0~1 scores for binary classes.
-
-Confidence scores for multiple class will be updated afterwards.
-
-```bash
-pickle_file [name : image base name]
-    |- 'file_name' : file name of the test image
-    |- 'features'  : extracted feature vector
-    |- 'score'     : Score for binary classification
-```

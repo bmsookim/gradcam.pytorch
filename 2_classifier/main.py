@@ -1,6 +1,6 @@
 # ************************************************************
-# Author : Bumsoo Kim, 2017
-# Github : https://github.com/meliketoy/cellnet.pytorch
+# Author : Bumsoo Kim, 2018
+# Github : https://github.com/meliketoy/gradcam.pytorch
 #
 # Korea University, Data-Mining Lab
 # Deep Convolutional Network Fine tuning Implementation
@@ -96,20 +96,8 @@ def getNetwork(args):
             print('Error : VGGnet should have depth of either [11, 13, 16, 19]')
             sys.exit(1)
         file_name = 'vgg-%s' %(args.depth)
-    elif (args.net_type == 'densenet'):
-        if(args.depth == 121):
-            net = models.densenet121(pretrained=args.finetune)
-        elif(args.depth == 161):
-            net = models.densenet161(pretrained=args.finetune)
-        elif(args.depth == 169):
-            net = models.densenet169(pretrained=args.finetune)
-        file_name = 'densenet-%s' %(args.depth)
     elif (args.net_type == 'resnet'):
-        #net = resnet(args.finetune, args.depth)
-
-        checkpoint = torch.load('./checkpoint/ALPS/resnet-50.t7')
-        net = checkpoint['model'].module
-        print(net)
+        net = resnet(args.finetune, args.depth)
 
         file_name = 'resnet-%s' %(args.depth)
     else:
@@ -157,6 +145,7 @@ if (args.testOnly):
         outputs = model(inputs)
 
         print(outputs.data.cpu().numpy()[0])
+        file_name = 'densenet-%s' %(args.depth)
         softmax_res = softmax(outputs.data.cpu().numpy()[0])
 
         _, predicted = torch.max(outputs.data, 1)
