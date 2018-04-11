@@ -78,6 +78,8 @@ $ ./scripts/detect.sh
 ```
 
 This will generate a heatmap which will look like
+
+
 ![alt-text-1](./imgs/cat_test1.jpg "cat") ![alt-text-2](./imgs/dog_test1.jpg "dog")
 ![alt-text-1](./imgs/cat_test2.jpg "cat") ![alt-text-2](./imgs/dog_test2.jpg "dog")
 
