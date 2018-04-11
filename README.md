@@ -78,11 +78,8 @@ $ ./scripts/detect.sh
 ```
 
 This will generate a heatmap which will look like
-<p align="left"><img width="40%" src="./imgs/cat_test1.jpg"></p>
-<p align="right"><img width="40%" src="./imgs/dog_test1.jpg"></p>
-
-<p align="left"><img width="40%" src="./imgs/cat_test2.jpg"></p>
-<p align="right"><img width="40%" src="./imgs/dog_test2.jpg"></p>
+![alt-text-1](./imgs/cat_test1.jpg "cat") ![alt-text-2](./imgs/dog_test1.jpg "dog")
+![alt-text-1](./imgs/cat_test2.jpg "cat") ![alt-text-2](./imgs/dog_test2.jpg "dog")
 
 See [README-detector](./3_detector/README.md) for further instructions.
 
