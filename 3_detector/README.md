@@ -60,5 +60,8 @@ Supporting networks
 
 - Grad-CAM Image
 
-![alt-text-1](../imgs/cat_test1.jpg "cat") ![alt-text-2](../imgs/dog_test1.jpg "dog")
-![alt-text-1](../imgs/cat_test2.jpg "cat") ![alt-text-2](../imgs/dog_test2.jpg "dog")
+### Attention for cat
+![alt-text-1](../imgs/cat_test1.jpg "cat") ![alt-text-2](../imgs/cat_test2.jpg "dog")
+
+### Attention for dog
+![alt-text-1](../imgs/dog_test2.jpg "cat") ![alt-text-2](../imgs/dog_test2.jpg "dog")

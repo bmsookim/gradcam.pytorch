@@ -79,9 +79,11 @@ $ ./scripts/detect.sh
 
 This will generate a heatmap which will look like
 
+### Attention for cat
+![alt-text-1](./imgs/cat_test1.jpg "cat1") ![alt-text-2](./imgs/cat_test2.jpg "cat2")
 
-![alt-text-1](./imgs/cat_test1.jpg "cat") ![alt-text-2](./imgs/dog_test1.jpg "dog")
-![alt-text-1](./imgs/cat_test2.jpg "cat") ![alt-text-2](./imgs/dog_test2.jpg "dog")
+### Attention for dog
+![alt-text-1](./imgs/dog_test1.jpg "dog1") ![alt-text-2](./imgs/dog_test2.jpg "dog2")
 
 See [README-detector](./3_detector/README.md) for further instructions.
 
