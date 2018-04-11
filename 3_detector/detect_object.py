@@ -152,6 +152,7 @@ if __name__ == "__main__":
 
     test_transform = transforms.Compose([
         transforms.Scale(224),
+        transforms.CenterCrop(224),
         transforms.ToTensor(),
         transforms.Normalize(cf.mean, cf.std)
     ])
@@ -177,7 +178,7 @@ if __name__ == "__main__":
             file_path = os.path.join(subdir, f)
             if (is_image(f)):
                 image = Image.open(file_path)
-                original = cv2.imread(file_path)
+                #original = cv2.imread(file_path)
                 if test_transform is not None:
                     image = test_transform(image)
                 inputs = image
@@ -199,8 +200,26 @@ if __name__ == "__main__":
                 output = gcam.generate(target_layer = 'layer4.2')
 
                 heatmap = output
-                original = cv2.cvtColor(original, cv2.COLOR_RGB2BGR)
-                original = cv2.resize(original, (224, 224))
-                save_dir = "./results/"+f
+                original = inputs.data.cpu().numpy()
+                print(original)
+                original = np.transpose(original, (0,2,3,1))[0]
+                original = original * cf.std + cf.mean
+                original = np.uint8(original * 255.0)
+                #original = cv2.cvtColor(original, cv2.COLOR_RGB2BGR)
+                #original = cv2.resize(original, (224, 224))
+                mask = np.uint8(heatmap * 255.0)
+
+                check_and_mkdir("./results/heatmaps")
+                check_and_mkdir("./results/masks")
+
+                save_dir = "./results/heatmaps/"+f
+                mask_dir = "./results/masks/"+f
+
                 print(save_dir)
+                print(mask_dir)
+
+                print(original.shape)
+
                 gcam.save(save_dir, heatmap, original)
+                cv2.imwrite("./results/"+f, original)
+                cv2.imwrite(mask_dir, mask)

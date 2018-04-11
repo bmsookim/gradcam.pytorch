@@ -9,7 +9,7 @@ aug_dir = '/home/bumsoo/Data/split/'
 
 data_base = data_dir + name
 aug_base = aug_dir + name
-test_dir = aug_dir + name + '/val'
+test_dir = '/home/bumsoo/Data/test/' + name
 
 # model directory
 model_dir = '../2_classifier/checkpoints'

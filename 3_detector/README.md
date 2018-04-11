@@ -56,8 +56,14 @@ Supporting networks
 
 - Original Image
 
-![alt_tag](../imgs/catdog_original.png)
+<p align="left"><img width="50%" src="./imgs/catdog_test1.jpg"></p>
+<p align="right"><img width="50%" src="./imgs/catdog_test2.jpg"></p>
 
 - Grad-CAM Image
 
-![alt_tag](../imgs/catdog_output.png)
+<p align="left"><img width="50%" src="./imgs/cat_test1.jpg"></p>
+<p align="right"><img width="50%" src="./imgs/dog_test1.jpg"></p>
+
+<p align="left"><img width="50%" src="./imgs/cat_test2.jpg"></p>
+<p align="right"><img width="50%" src="./imgs/dog_test2.jpg"></p>
+
