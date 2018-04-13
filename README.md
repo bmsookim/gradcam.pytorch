@@ -4,7 +4,7 @@
 
 This is the repository for Pytorch Implementation of
 "Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization".
-If you have any issues regarding this repository or the paper, please contact meliketoy@gmail.com.
+If you have any issues regarding this repository, please contact meliketoy@gmail.com.
 
 You can see the original paper [here](https://arxiv.org/pdf/1610.02391.pdf)
 
